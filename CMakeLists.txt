@@ -1,0 +1,12 @@
+set(TARGET dummy)
+
+project(${TARGET})
+
+add_executable(${TARGET}
+    dummy.cc
+)
+
+INSTALL(TARGETS ${TARGET}
+	DESTINATION /usr/bin/erostamas/
+	PERMISSIONS OWNER_READ OWNER_EXECUTE GROUP_READ GROUP_EXECUTE WORLD_READ WORLD_EXECUTE
+)
