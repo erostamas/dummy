@@ -32,11 +32,6 @@ timestamps {
 
     } catch (err) {
         currentBuild.result = "FAILURE"
-        #mail(
-        #    to: 'tamas.eros1@gmail.com',
-        #    subject: 'Job generation failed',
-        #    body: "Failed job URL: ${env.BUILD_URL}"
-        #)
         throw err
     }
     }
